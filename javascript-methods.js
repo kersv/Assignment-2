@@ -91,3 +91,16 @@ Array.prototype.myEach = function(callbackFn) {
     }
     return indx;
 };
+  
+  // PUSH //
+  Array.prototype.myPush = function(...args) {
+    let args_index = 0; 
+    let length = this.length; 
+    for(let i = length; i < length + args.length; i++){
+        this[i] = args[args_index];
+        args_index++;
+    }
+    return this.length;
+  };
+  
+  
