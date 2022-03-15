@@ -57,4 +57,37 @@ Array.prototype.myEach = function(callbackFn) {
       return exist;
     
   };
- 
+  
+  // INDEXOF //
+  Array.prototype.myIndexOf = function(item, begin) {
+    let start = 0;
+    let length = this.length;
+    let indx = -1;
+    if(begin === undefined){
+        for(let i = 0; i < length; i++){
+            if(this[i] == item){
+                indx = i;
+                break;
+            }
+        }
+    }
+    else if(begin < 0){
+        start = length + begin;
+        for(let i = start; i < length; i++){
+            if(this[i] == item){
+                indx = i;
+                break;
+            }
+        }
+    }
+    else{
+        start = begin;
+        for(let i = start; i < length; i++){
+            if(this[i] == item){
+                indx = i;
+                break;
+            }
+        }
+    }
+    return indx;
+};
