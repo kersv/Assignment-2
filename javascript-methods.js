@@ -15,3 +15,15 @@ Array.prototype.myEach = function(callbackFn) {
     }
     return new_array;
   };
+  
+  // SOME //
+  Array.prototype.mySome = function(callback) {
+    for(let i = 0; i < this.length; i++){
+        var temp = callback(this[i], i, this)
+        if(temp === true){
+            break;
+        }
+    }
+    return temp;
+  };
+  
