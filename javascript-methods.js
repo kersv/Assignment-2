@@ -27,3 +27,23 @@ Array.prototype.myEach = function(callbackFn) {
     return temp;
   };
   
+  // REDUCE //
+  Array.prototype.myReduce = function(callback, begin) {
+      var total = 0; 
+      var temp = 0;
+
+      if(begin != undefined){
+          total = begin;
+      }
+      else{
+          total = this[0];
+          temp++;
+      }
+
+      for(let i = 0; i < this.length; i++){
+          total = callback(total, this[i], i, this);
+      }
+      return total;
+  };
+  
+  
