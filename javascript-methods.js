@@ -146,4 +146,11 @@ Array.prototype.myEach = function(callbackFn) {
     return new_array;
   };
   
- 
+  // VALUES //
+  Object.myValues = function(obj) {
+    const new_array = [];
+    for(key in obj){
+        new_array.push(obj[key]);
+    }
+    return new_array;
+  };
