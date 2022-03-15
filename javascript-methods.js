@@ -103,4 +103,38 @@ Array.prototype.myEach = function(callbackFn) {
     return this.length;
   };
   
+  // LASTINDEXOF //
+  Array.prototype.myLastIndexOf = function(item, begin) {
+    let length = this.length;
+    let indx = -1;
+    let start = length -1;
+    if(begin === undefined){
+        for(let i = start; i > -1; i--){
+            if(this[i] == item){
+                indx = i;
+                break;
+            }
+        }
+    }
+    else if(begin < 0){
+        start = begin + length;
+        for(let i = start; i > -1; i++){
+            if(this[i] == item){
+                indx = i;
+                break;
+            }
+        }
+    }
+
+    else{
+        for(let i = start; i > -1; i--){
+            if(this[i] == item){
+                indx = i;
+                break;
+            }
+        }
+    }
+    return indx;
+  };
+  
   
