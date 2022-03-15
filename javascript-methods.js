@@ -137,4 +137,13 @@ Array.prototype.myEach = function(callbackFn) {
     return indx;
   };
   
+  // KEYS //
+  Object.myKeys = function(obj) {
+    const new_array = [];
+    for(key in obj){
+        new_array.push(key);
+    }
+    return new_array;
+  };
   
+ 
