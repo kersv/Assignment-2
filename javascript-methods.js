@@ -46,4 +46,15 @@ Array.prototype.myEach = function(callbackFn) {
       return total;
   };
   
-  
+  // INCLUDES //
+  Array.prototype.myIncludes = function(callback) {
+      let exist = false;
+      for(let i = 0; i < this.length; i++){
+          if(this[i] === callback){
+              exist = true;
+          }
+      }
+      return exist;
+    
+  };
+ 
